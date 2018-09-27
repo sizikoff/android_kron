@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '27.0.3'
+
+    def apiHost
+    if (project.hasProperty("host")) {
+        apiHost = project.property("host")
+    } else {
+        apiHost = "https://api.fondy.eu"
+    }
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        buildConfigField "String", "API_HOST", "\"" + apiHost + "\""
+    }
+    println("API_HOST: " + apiHost)
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+dependencies {
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+}

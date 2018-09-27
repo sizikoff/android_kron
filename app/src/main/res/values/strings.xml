@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Kron</string>
+
+    <string name="dialog_ok">Ok</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="lbl_amount">Amount:</string>
+    <string name="lbl_ccy">Currency:</string>
+    <string name="lbl_email">Email:</string>
+    <string name="lbl_description">Description:</string>
+    <string name="btn_pay">Pay</string>
+    <string name="e_invalid_amount">Invalid amount</string>
+    <string name="e_invalid_email">Invalid email</string>
+    <string name="e_invalid_description">Enter description</string>
+    <string name="loading">Loading…</string>
+    <string name="sign_with_email">Подтвердить и создать</string>
+    <string name="Reg"><u>Регистрация</u></string>
+    <string name="Vhod"><u>Войти</u></string>
+    <string name="Less"><u>Я забыл(а)пароль</u></string>
+    <string name="zayavka">Подать заявку</string>
+    <string name="endR">Ваше место назначение</string>
+    <string name="startR">Ваше местоположение</string>
+    <integer name="com_vk_sdk_AppId">6602568</integer>
+    <string name="title_activity_login_partner">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">ivanov@gmail.com</string>
+    <string name="prompt_password">*************</string>
+    <string name="action_sign_in">ВОЙТИ</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="reg_from">Регистрация через</string>
+    <string name="icon_description">Логатип КРОН</string>
+</resources>

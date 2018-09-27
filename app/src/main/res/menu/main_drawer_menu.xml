@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_auto"
+            android:icon="@drawable/icon_car"
+            android:title="Kron AUTO"/>
+        <item
+            android:id="@+id/ship"
+            android:icon="@drawable/logo_ship"
+            android:title="Kron SHIP" />
+        <item
+            android:id="@+id/food"
+            android:icon="@drawable/logo_food"
+            android:title="Kron FOOD" />
+        <item
+            android:visible="false"
+            android:id="@+id/drawer_payment"
+            android:title="Оплата"/>
+        <item
+            android:icon="@drawable/logo_zayavki"
+            android:id="@+id/zayavki"
+            android:title="Архив заявок" />
+        <item
+            android:icon="@drawable/logo_news"
+            android:id="@+id/news"
+            android:title="Новости" />
+        <item
+            android:icon="@drawable/logo_settings"
+            android:id="@+id/settings"
+            android:title="Настройки"/>
+        <item
+            android:icon="@drawable/logo_exit"
+            android:id="@+id/exit"
+            android:title="Выход"/>
+
+    </group>
+</menu>

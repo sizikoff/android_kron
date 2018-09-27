@@ -1,0 +1,12 @@
+<android.support.design.widget.NavigationView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="left"
+    android:background="@color/app_main_background"
+    app:itemIconTint="@color/Dark_main_theme"
+    app:headerLayout="@layout/nav_head_main_drawer"
+    app:itemTextAppearance="@style/NavigationwDroverText"
+    app:menu="@menu/main_drawer_menu">
+</android.support.design.widget.NavigationView>

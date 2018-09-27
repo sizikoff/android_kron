@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.PaymentActivity">
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+        </android.support.design.widget.AppBarLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/main_fon"
+            android:padding="4dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout
+                android:id="@+id/payment_card_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/lv_background"
+                android:divider="@drawable/separator"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+                <ImageView
+                    android:id="@+id/payment_card_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/visa"/>
+                <TextView
+                    android:id="@+id/payment_card_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="5347 XXXX XXXX 4385"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/payment_static"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/payment_card_lv"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:gravity="center"
+                android:text="Здесь вы можете добавить способ оплаты услуг kron"
+                android:textAllCaps="true"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/payment_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/payment_static"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/login_button_backround"
+                android:text="Добавить"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <include layout="@layout/navigation_view" />
+</android.support.v4.widget.DrawerLayout>

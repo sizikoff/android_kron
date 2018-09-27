@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "605874494316",
+    "firebase_url": "https://projectkron-androidkron-beb78.firebaseio.com",
+    "project_id": "projectkron-androidkron-beb78",
+    "storage_bucket": "projectkron-androidkron-beb78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605874494316:android:a6f7741aeda3b1a8",
+        "android_client_info": {
+          "package_name": "com.mercury.kron.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "605874494316-3lskj4fnkr32uq6mcbcpv72vs9m1evgs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mercury.kron.debug",
+            "certificate_hash": "104d84dc5c3d937607b50727666b1546714cca11"
+          }
+        },
+        {
+          "client_id": "605874494316-3jcrm4vgmi58737816rak97amm2t330n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBckmH0dUnU7TnRE_GHJ_NO2usQMvIvI90"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "605874494316-3jcrm4vgmi58737816rak97amm2t330n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

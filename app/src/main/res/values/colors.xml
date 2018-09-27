@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00636c</color>
+    <color name="colorPrimaryDark">#00636c</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- custom color -->
+    <color name="app_main_background">#00636c</color>
+    <color name="app_button_background_red">#d70000</color>
+    <color name="app_button_background_red_focused">#F44336</color>
+    <color name="app_button_background_red_pressed">#FF1744</color>
+    <color name="app_button_background_red_disabled">#dfa38d</color>
+    <color name="app_white">#80ffffff</color>
+    <color name="app_black">#000000</color>
+    <color name="main_color">#ae5a57</color>
+    <color name="Dark_main_theme">#913535</color>
+
+    <color name="app_gray">#e3e2e2</color>
+    <color name="app_blue_ligth">#00b1ed</color>
+
+    <color name="app_panel_gray_transparent">#bbbfbfbf</color>
+
+    <color name="app_green">#458f13</color>
+
+</resources>

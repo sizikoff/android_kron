@@ -1,0 +1,71 @@
+<resources xmlns:android="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- App Style -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="LoginWelcomeText">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="OneEditText">
+        <item name="android:maxLength">1</item>
+        <item name="android:background">@drawable/edit_text_pay</item>
+        <item name="android:inputType">number</item>
+    </style>
+
+    <style name="MultiEditText">
+        <item name="android:background">@drawable/edit_text_pay</item>
+        <item name="android:inputType">number</item>
+    </style>
+
+    <style name="RedAccentButton" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/app_button_background_red</item>
+    </style>
+    <!-- -->
+    <style name="NavigationwDroverText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="custom_dialog">
+        <item name="android:fullDark">@android:color/transparent</item>
+    </style>
+
+    <!-- LOCK BUTTON -->
+    <style name="lock_button" parent="Base.Widget.AppCompat.Button">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="lock_button.unlock" parent="lock_button">
+        <item name="android:textColor">@color/app_white</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="lock_button.lock">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@color/app_white</item>
+    </style>
+
+</resources>

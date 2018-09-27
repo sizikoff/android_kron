@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_main_background"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ui.activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/login_image"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/kron" />
+
+    <LinearLayout
+        android:id="@+id/login_ll_box"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_image"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:paddingBottom="24dp"
+        android:paddingTop="24dp">
+
+        <EditText
+            android:id="@+id/login_email_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/logo_enter"
+            android:hint="example@mail.ru"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/app_white" />
+
+        <EditText
+            android:id="@+id/login_password_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/logo_pass"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:textColor="@color/app_white" />
+
+        <TextView
+            android:id="@+id/login_remember_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="8dp"
+            android:clickable="true"
+            android:text="@string/Less"
+            android:textColor="@color/app_white"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/login_bt"
+            android:layout_width="224dp"
+            android:layout_height="31dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/login_button_backround"
+            android:text="Вход"
+            android:textColor="@color/withe_button_color"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="123dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="81dp">
+
+
+        <ImageButton
+            android:id="@+id/phoneSign"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="38dp"
+    android:background="@drawable/button_states"
+    app:srcCompat="@drawable/phone" />
+
+    <ImageButton
+        android:id="@+id/fb_but"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_states"
+        app:srcCompat="@drawable/fsbook" />
+
+    <ImageButton
+        android:id="@+id/vk_but"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_states"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="42dp"
+        app:srcCompat="@drawable/vk" />
+</RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:text="Пользуетесь KRON впервые?"
+        android:textColor="@color/withe_button_color" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-23dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/Reg"
+        android:textColor="@color/main_color"
+        android:textStyle="bold|italic" />
+
+
+</RelativeLayout>

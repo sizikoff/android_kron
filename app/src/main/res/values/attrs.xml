@@ -1,0 +1,13 @@
+<resources>
+    <declare-styleable name="LockButtonView">
+        <attr name="style_lock" format="reference" />
+        <attr name="style_unlock" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ButtonStyleHolder">
+        <attr name="android:background" />
+        <attr name="android:textSize" />
+        <attr name="android:textColor" />
+    </declare-styleable>
+
+</resources>
