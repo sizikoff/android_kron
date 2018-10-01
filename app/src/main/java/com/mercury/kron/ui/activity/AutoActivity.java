@@ -15,6 +15,7 @@ import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ import com.mercury.kron.Js2Gis.WebViewCallbacks;
 import com.mercury.kron.R;
 import com.mercury.kron.ui.dialogs.InfoRequestDialog;
 import com.mercury.kron.ui.dialogs.SelectCountHumanDialog;
+import com.mercury.kron.ui.views.LockButton;
 
 public class AutoActivity extends BaseActivity implements View.OnClickListener, WebViewCallbacks {
 
@@ -30,7 +32,8 @@ public class AutoActivity extends BaseActivity implements View.OnClickListener, 
     private Button mCancelButton;
     private Button mOkButton;
     private int startEndPoint = 0;
-
+    private boolean isPartner = false;
+    public static final String EXTRA_BOOLEAN = "boolean" ;
 
 
     private int mCountHuman = 0; // количество человк для поездки
@@ -40,6 +43,7 @@ public class AutoActivity extends BaseActivity implements View.OnClickListener, 
             if (count != 0) {
                 mCountHuman = count;
                 InfoRequestDialog dialog = InfoRequestDialog.newInstance(mCountHuman);
+                dialog.setPartner(isPartner);
                 dialog.show(getFragmentManager(), "INFO_DIALOG");
             }
         }
@@ -58,13 +62,13 @@ public class AutoActivity extends BaseActivity implements View.OnClickListener, 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auto);
         setPermissions();
-
+        isPartner = getIntent().getBooleanExtra(MainActivity.EXTRA_BOOLEAN,false);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mOkButton = (Button) findViewById(R.id.auto_ok_bt);
 
         mOkButton.setOnClickListener(this);
-
+        setStyleForPartner(isPartner);
         setupToolBar();
 
 
@@ -103,6 +107,7 @@ public class AutoActivity extends BaseActivity implements View.OnClickListener, 
             case R.id.auto_ok_bt:
                 this.showToast("Начало диалога о поездке");
                 SelectCountHumanDialog dialog = SelectCountHumanDialog.newInstance();
+                dialog.setPartner(isPartner);
                 dialog.setOnSelectCountListener(mSelectCountListener);
                 dialog.show(getFragmentManager(), "SELECT_COUNT");
                 break;
@@ -151,5 +156,27 @@ public class AutoActivity extends BaseActivity implements View.OnClickListener, 
 
     @Override
     public void onBackPressed() {
+    }
+
+    private void setStyleForPartner( boolean isChecked){
+        LinearLayout linearLayout = new LinearLayout(this);
+        if(isChecked){
+
+
+            int contextCompat = ContextCompat.getColor(AutoActivity.this, R.color.app_partner_background);
+            mToolbar.setBackgroundColor(contextCompat);
+//            View layout = getLayoutInflater().inflate(R.layout.selectcounthuman_dialog,linearLayout,false);
+//              layout.setBackgroundColor(contextCompat);
+
+
+
+        }else {
+
+            isPartner = false;
+            int contextCompat = ContextCompat.getColor(AutoActivity.this, R.color.app_main_background);
+            mToolbar.setBackgroundColor(contextCompat);
+
+        }
+
     }
 }

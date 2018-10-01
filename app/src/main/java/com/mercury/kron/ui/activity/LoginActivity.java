@@ -48,6 +48,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     private EditText mPassword;
     ImageButton mButtonPhone;
     ImageButton mVkBut;
+    ImageButton mFBBut;
     private TextView mRememberPass;
     ProgressDialog pd;
     private TextView RegWindow;
@@ -73,6 +74,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         mButtonPhone = (ImageButton) findViewById(R.id.phoneSign);
         RegWindow = (TextView) findViewById(R.id.textView2);
         mVkBut = (ImageButton) findViewById(R.id.vk_but);
+        mFBBut = (ImageButton) findViewById(R.id.fb_but);
 
         RegWindow.setOnClickListener(this);
         mButtonPhone.setOnClickListener(this);
@@ -103,15 +105,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             @Override
             public void onCheckedChanged(CompoundButton buttonView,
                                          boolean isChecked) {
-                if(isChecked){
-                    mtextForSwitch.setText(R.string.kron_partner);
-                    isPartner = true;
-                    mRelativeLayout.setBackgroundColor((ContextCompat.getColor(LoginActivity.this, R.color.app_partner_background)));
-                }else {
-                    mRelativeLayout.setBackgroundColor((ContextCompat.getColor(LoginActivity.this, R.color.app_main_background)));
-                    isPartner = false;
-                    mtextForSwitch.setText(R.string.kron_client);
-                }
+              setStyleForPartner(isChecked);
 
             }
 
@@ -235,6 +229,29 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     @Override
     public void onBackPressed() {
         finish();
+    }
+
+    private void setStyleForPartner( boolean isChecked){
+
+        if(isChecked){
+            mtextForSwitch.setText(R.string.kron_partner);
+            isPartner = true;
+           int contextCompat = ContextCompat.getColor(LoginActivity.this, R.color.app_partner_background);
+            mRelativeLayout.setBackgroundColor(contextCompat);
+            mButtonPhone.setBackgroundColor(contextCompat);
+            mFBBut.setBackgroundColor(contextCompat);
+            mVkBut.setBackgroundColor(contextCompat);
+        }else {
+            mtextForSwitch.setText(R.string.kron_client);
+            isPartner = false;
+            int contextCompat = ContextCompat.getColor(LoginActivity.this, R.color.app_main_background);
+            mRelativeLayout.setBackgroundColor(contextCompat);
+            mButtonPhone.setBackgroundColor(contextCompat);
+            mFBBut.setBackgroundColor(contextCompat);
+            mVkBut.setBackgroundColor(contextCompat);
+
+        }
+
     }
 }
 //    public void registration(View view) {

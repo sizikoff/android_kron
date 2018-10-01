@@ -62,7 +62,6 @@
         <activity
             android:name=".ui.activity.tamplets.LoginPartnerActivity"
             android:label="@string/title_activity_login_partner"></activity>
-        <activity android:name=".ui.activity.LoginPartnerMainActivity"></activity>
     </application>
 
 </manifest>

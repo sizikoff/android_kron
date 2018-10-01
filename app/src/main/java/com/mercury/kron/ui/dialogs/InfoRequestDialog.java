@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -21,12 +22,15 @@ public class InfoRequestDialog extends DialogFragment implements View.OnClickLis
     private TextView mTo; // куда
     private TextView mSumm; // сумма
     private Button mButton;
+    private boolean isPartner =false;
 
     public static InfoRequestDialog newInstance(int countHuman) {
         return new InfoRequestDialog();
     }
 
-
+    public void setPartner(boolean partner) {
+        isPartner = partner;
+    }
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         View v = LayoutInflater.from(getActivity()).inflate(R.layout.inforequest_dialog, null);
@@ -36,6 +40,7 @@ public class InfoRequestDialog extends DialogFragment implements View.OnClickLis
         mSumm = (TextView) v.findViewById(R.id.info_summ);
 
         mButton = (Button) v.findViewById(R.id.info_bt_ok);
+        if(isPartner)mButton.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.app_partner_background));
         mButton.setOnClickListener(this);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());

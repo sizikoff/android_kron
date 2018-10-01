@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/nav_head_main_drawer"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="160dp"
@@ -10,6 +11,7 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
     <ImageView
         android:id="@+id/drawer_photo"
+        android:layout_marginTop="10dp"
         android:layout_width="@dimen/nv_avatar_size"
         android:layout_height="@dimen/nv_avatar_size" />
     <LinearLayout
@@ -23,7 +25,7 @@
 
         <TextView
             android:id="@+id/drawer_client_fio"
-            android:text="Имя клиента"
+            android:text="@string/nameClient"
             android:textColor="@color/app_black"
             android:textSize="18dp"
             android:textStyle="bold"
