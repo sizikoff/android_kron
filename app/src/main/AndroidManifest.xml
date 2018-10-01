@@ -60,10 +60,9 @@
         <activity android:name=".ui.activity.RegActivity" />
         <activity android:name=".auth.VkAuth" />
         <activity
-            android:name=".ui.activity.LoginPartnerActivity"
-            android:label="@string/title_activity_login_partner" >
-
-        </activity>
+            android:name=".ui.activity.tamplets.LoginPartnerActivity"
+            android:label="@string/title_activity_login_partner"></activity>
+        <activity android:name=".ui.activity.LoginPartnerMainActivity"></activity>
     </application>
 
 </manifest>

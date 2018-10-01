@@ -4,12 +4,16 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +27,8 @@ import com.mercury.kron.R;
 import com.mercury.kron.auth.PhoneActivity;
 import com.mercury.kron.auth.VkAuth;
 import com.vk.sdk.util.VKUtil;
+
+import org.w3c.dom.Text;
 
 import java.util.Arrays;
 
@@ -46,12 +52,18 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     ProgressDialog pd;
     private TextView RegWindow;
     public static final String EXTRA_MESSAGE = "message" ;
+     private RelativeLayout mRelativeLayout;
+    private Switch aSwitch;
+    private boolean isPartner = false;
+    public static final String EXTRA_BOOLEAN = "boolean" ;
+    private TextView mtextForSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        mRelativeLayout = (RelativeLayout) findViewById(R.id.login_activity_maket);
+        mtextForSwitch = (TextView) findViewById(R.id.text_switch);
         mAuth = FirebaseAuth.getInstance();
 
         mEmail = (EditText) findViewById(R.id.login_email_et);
@@ -85,6 +97,25 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
         String[] fingerprints = VKUtil.getCertificateFingerprint(this, this.getPackageName());
         System.out.println(Arrays.asList(fingerprints));
+        aSwitch = (Switch) findViewById(R.id.switch_to_partner);
+
+        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                if(isChecked){
+                    mtextForSwitch.setText(R.string.kron_partner);
+                    isPartner = true;
+                    mRelativeLayout.setBackgroundColor((ContextCompat.getColor(LoginActivity.this, R.color.app_partner_background)));
+                }else {
+                    mRelativeLayout.setBackgroundColor((ContextCompat.getColor(LoginActivity.this, R.color.app_main_background)));
+                    isPartner = false;
+                    mtextForSwitch.setText(R.string.kron_client);
+                }
+
+            }
+
+        });
 
     }
 
@@ -115,6 +146,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         switch (view.getId()) {
             case R.id.login_bt:
                 Intent intent = new Intent(this, MainActivity.class);
+                intent.putExtra("boolean",isPartner);
                 startActivity(intent);
 //                signIn(mEmail.getText().toString(), mPassword.getText().toString());
                 pd = new ProgressDialog(this);

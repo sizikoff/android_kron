@@ -8,19 +8,21 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Switch;
 
 import com.mercury.kron.R;
 
 
+import com.mercury.kron.ui.activity.tamplets.LoginPartnerActivity;
 import com.mercury.kron.utils.RoundedBitmap;
 
 /**
@@ -31,31 +33,23 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     private DrawerLayout mNavigationDrawer;
     private Toolbar mToolbar;
     public ProgressDialog mProgressDialog;
-    private Switch aSwitch;
+    private boolean isPartner = false;
+    private RelativeLayout mRelativeLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
+        mRelativeLayout = (RelativeLayout) findViewById(R.id.relative_layout_main);
+        isPartner = getIntent().getBooleanExtra(LoginActivity.EXTRA_BOOLEAN,false);
+        if(isPartner) {
+            mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.app_partner_background));
+        } else {
+            mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.app_main_background));
+        }
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mNavigationDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        aSwitch =(Switch) findViewById(R.id.switch_to_partner);
 
-        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView,
-                                         boolean isChecked) {
-                if(isChecked){
-                    aSwitch.setChecked(false);
-                    Intent intent = new Intent(MainActivity.this,LoginPartnerActivity.class);
-                    startActivity(intent);
-                }
-
-            }
-
-        });
         setupToolBar();
         setupDrower();
 

@@ -21,5 +21,6 @@
     <color name="app_panel_gray_transparent">#bbbfbfbf</color>
 
     <color name="app_green">#458f13</color>
+    <color name="switchbackground">#FF32C43C</color>
 
 </resources>

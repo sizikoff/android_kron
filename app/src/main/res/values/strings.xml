@@ -15,7 +15,7 @@
     <string name="sign_with_email">Подтвердить и создать</string>
     <string name="Reg"><u>Регистрация</u></string>
     <string name="Vhod"><u>Войти</u></string>
-    <string name="Less"><u>Я забыл(а)пароль</u></string>
+    <string name="Less"><u>Забыли пароль?</u></string>
     <string name="zayavka">Подать заявку</string>
     <string name="endR">Ваше место назначение</string>
     <string name="startR">Ваше местоположение</string>
@@ -35,4 +35,6 @@
     </string>
     <string name="reg_from">Регистрация через</string>
     <string name="icon_description">Логатип КРОН</string>
+    <string name="kron_partner">KRON PARTNER</string>
+    <string name="kron_client">KRON CLIENT</string>
 </resources>

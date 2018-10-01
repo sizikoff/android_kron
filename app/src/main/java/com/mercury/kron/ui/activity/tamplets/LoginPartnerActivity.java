@@ -1,4 +1,4 @@
-package com.mercury.kron.ui.activity;
+package com.mercury.kron.ui.activity.tamplets;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -36,6 +36,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.mercury.kron.R;
+import com.mercury.kron.ui.activity.MainActivity;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
