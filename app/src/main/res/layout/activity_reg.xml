@@ -6,149 +6,175 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:background="@color/app_white"
 android:orientation="vertical"
+
+
 tools:context="com.mercury.kron.ui.activity.RegActivity">
 
-    <ImageButton
-        android:id="@+id/AgreeNotAgree"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="150dp"
-        android:layout_marginEnd="-83dp"
-        android:layout_toStartOf="@+id/textView"
-        android:src="@drawable/not_agree"
-        android:layout_marginRight="83dp"
-        android:layout_toLeftOf="@+id/textView" />
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout_reg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+           android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbar_reg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay"/>
     </android.support.design.widget.AppBarLayout>
 
+    <!--<TextView-->
+        <!--android:id="@+id/textView3"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginTop="13dp"-->
+        <!--android:text="Регистрация"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:textSize="25sp"-->
+        <!--android:textStyle="bold" />-->
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="45dp"
         android:orientation="vertical"
         android:padding="15dp">
 
+
+        <EditText
+            android:id="@+id/login_email_reg"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="72dp"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQR@STUVWXYZ0987654321."
+            android:drawableLeft="@drawable/logo_mail_reg"
+            android:hint="ivanov@gmail.com"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/name_reg"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/login_email_reg"
+            android:layout_alignParentStart="true"
+            android:drawableLeft="@drawable/logo_log_reg"
+            android:hint="Введите имя"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/colorPrimary" />
+
+
+        <EditText
+            android:id="@+id/login_password_et1"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_reg"
+            android:layout_alignParentStart="true"
+            android:drawableLeft="@drawable/logo_pass_reg"
+            android:hint="Пароль"
+            android:inputType="textPassword"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/_password_replay"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+
+            android:drawableLeft="@drawable/logo_pass_reg"
+            android:hint="Повторите пароль"
+            android:inputType="textPassword"
+            android:textColor="@color/colorPrimary" />
+
+        <RelativeLayout
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp">
+
+            <ImageButton
+                android:id="@+id/AgreeNotAgree"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/rect_agree_empty" />
+
+            <TextView
+                android:id="@+id/condition"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/AgreeNotAgree"
+                android:paddingLeft="12dp"
+                android:paddingTop="12dp"
+                android:text="Я принимаю условия"
+                android:textColor="@color/colorPrimary"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/agree"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/condition"
+                android:paddingTop="12dp"
+                android:text="@string/i_agree_part1"
+                android:textColor="@color/main_color"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/agree2"
+                android:paddingLeft="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/condition"
+                android:layout_toEndOf="@+id/AgreeNotAgree"
+                android:text="@string/i_agree_part2"
+                android:textColor="@color/main_color"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/login_email_reg"
-        android:layout_width="315dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="72dp"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQR@STUVWXYZ0987654321."
-        android:drawableLeft="@drawable/logo_log_reg"
-        android:hint="ivanov@gmail.com"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/colorPrimary" />
-
-    <EditText
-        android:id="@+id/name_reg"
-        android:layout_width="315dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/login_email_reg"
-        android:drawableLeft="@drawable/logo_name_reg"
-        android:hint="Введите имя"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/colorPrimary" />
 
 
-    <EditText
-        android:id="@+id/login_password_et1"
-        android:layout_width="315dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/name_reg"
-        android:drawableLeft="@drawable/logo_pass_reg"
-        android:hint="Пароль"
-        android:inputType="textPassword"
-        android:textColor="@color/colorPrimary" />
 
-    <EditText
-        android:id="@+id/_password_replay"
-        android:layout_width="315dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:drawableLeft="@drawable/logo_pass_reg"
-        android:hint="Повторите пароль"
-        android:inputType="textPassword"
-        android:textColor="@color/colorPrimary" />
 
-    <TextView
-        android:id="@+id/condition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="174dp"
-        android:layout_marginStart="83dp"
-        android:layout_toEndOf="@+id/AgreeNotAgree"
-        android:text="Я принимаю условия"
-        android:textColor="@color/colorPrimary"
-        android:textSize="10dp" />
 
-    <TextView
-        android:id="@+id/agree"
-        android:layout_width="129dp"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/login_email_reg"
-        android:layout_alignTop="@+id/condition"
-        android:text="Соглашение на обработку персональных данных"
-        android:textColor="@color/main_color"
-        android:textSize="10dp"
-        android:layout_alignRight="@+id/login_email_reg" />
 
     <Button
         android:id="@+id/login_bt1"
         android:layout_width="311dp"
         android:layout_height="29dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
+       android:layout_centerHorizontal="true"
         android:layout_marginBottom="63dp"
         android:background="@drawable/login_button_backround"
         android:text="@string/sign_with_email"
         android:textColor="@color/withe_button_color"
         android:textSize="22sp"
         android:textStyle="bold" />
-
+<LinearLayout
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <TextView
-        android:id="@+id/textView3"
+
+        android:id="@+id/have_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:layout_marginTop="13dp"
-        android:text="Регистрация"
-        android:textColor="#ffffff"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
         android:layout_marginBottom="24dp"
-        android:layout_marginStart="51dp"
         android:text="Есть учетная запись?"
         android:textColor="@color/app_main_background" />
 
@@ -156,14 +182,16 @@ tools:context="com.mercury.kron.ui.activity.RegActivity">
         android:id="@+id/textView_vhod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textView3"
-        android:layout_alignTop="@+id/textView"
-        android:clickable="true"
+             android:clickable="true"
         android:focusable="true"
         android:text="@string/Vhod"
         android:textColor="@color/main_color"
         android:textStyle="bold|italic"
-        android:layout_alignRight="@+id/textView3" />
+        />
+</LinearLayout>
+
+
+
 
 
 </RelativeLayout>

@@ -57,11 +57,16 @@
             android:name=".ui.activity.AutoActivity"
             android:label="Kron AUTO" />
         <activity android:name=".auth.PhoneActivity" />
-        <activity android:name=".ui.activity.RegActivity" />
+        <activity
+            android:name=".ui.activity.RegActivity"
+            android:label="РЕГИСТРАЦИЯ"
+            android:parentActivityName=".ui.activity.LoginActivity"
+            android:theme="@style/AppTheme" />
         <activity android:name=".auth.VkAuth" />
         <activity
             android:name=".ui.activity.tamplets.LoginPartnerActivity"
-            android:label="@string/title_activity_login_partner"></activity>
+            android:label="@string/title_activity_login_partner" />
+        <activity android:name=".ui.activity.showInstruction.MainShowInstructionActivity"></activity>
     </application>
 
 </manifest>

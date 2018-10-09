@@ -1,9 +1,16 @@
 package com.mercury.kron.ui.activity;
 
-import android.app.ProgressDialog;
+
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.design.widget.AppBarLayout;
+import android.support.v4.content.ContextCompat;
+
+import android.support.v7.app.ActionBar;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -28,16 +35,28 @@ public class RegActivity extends BaseActivity implements OnClickListener {
 
     Button createAccount;
     EditText Email;
+    EditText NameReg;
     EditText Password;
     EditText ConfirmPassword;
     ImageButton agreeButton;
     boolean flag = true;
+    private boolean isPartner = false;
+    public static final String EXTRA_BOOLEAN = "boolean" ;
+    private Toolbar mToolbar;
+
 
     protected void onCreate(Bundle savedInstanceState) {
+        isPartner = getIntent().getBooleanExtra(LoginActivity.EXTRA_BOOLEAN,false);
+      if(isPartner) setTheme(R.style.Partner_AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reg);
+
+
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar_reg);
         mAuth = FirebaseAuth.getInstance();
         Email = (EditText) findViewById(R.id.login_email_reg);
+        NameReg = (EditText) findViewById(R.id.name_reg);
         Password = (EditText) findViewById(R.id.login_password_et1);
         createAccount = (Button) findViewById(R.id.login_bt1);
         ConfirmPassword = (EditText) findViewById(R.id._password_replay);
@@ -53,6 +72,20 @@ public class RegActivity extends BaseActivity implements OnClickListener {
                 }
             }
         };
+
+
+
+//        ActionBar actionBar = getSupportActionBar();
+//        actionBar.setDisplayHomeAsUpEnabled(true);
+//        actionBar.setHomeAsUpIndicator(R.drawable.arrow_back);
+        setStyleForPartner(isPartner);
+
+            ActionBar actionBar = getSupportActionBar();
+            assert actionBar != null;
+
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setHomeAsUpIndicator(R.drawable.arrow_back);
+
     }
 
 
@@ -138,6 +171,27 @@ public class RegActivity extends BaseActivity implements OnClickListener {
                             // ...
                         }
                     });
+        }
+    }
+
+    private void setStyleForPartner( boolean isChecked) {
+
+        if (isChecked) {
+
+            int contextCompat = ContextCompat.getColor(RegActivity.this, R.color.app_partner_background);
+                       mToolbar.setBackgroundColor(contextCompat);
+
+            Email.setTextColor(contextCompat);
+            Email.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.logo_mail_reg_p,0,0,0);
+            NameReg.setTextColor(contextCompat);
+            NameReg.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.logo_log_reg_p,0,0,0);
+            Password.setTextColor(contextCompat);
+            Password.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.logo_log_lack_p,0,0,0);
+            ConfirmPassword.setTextColor(contextCompat);
+            ConfirmPassword.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.logo_log_lack_p,0,0,0);
+
+        }else {
+          //  getApplication().setTheme(R.style.AppTheme);
         }
     }
 }

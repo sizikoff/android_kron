@@ -53,7 +53,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
        mNavigationView = (NavigationView) findViewById(R.id.navigation_view);
 
 
-
         setStyleForPartner(isPartner);
         setupToolBar();
         setupDrower();
@@ -82,6 +81,11 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     @Override
     public void onBackPressed() {
+        if (mNavigationDrawer.isDrawerOpen(GravityCompat.START)) {
+            mNavigationDrawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
     }
 
     // устанавливаем толбар
@@ -191,6 +195,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
              TextView textView =(TextView) layout.findViewById(R.id.drawer_client_fio);
              textView.setText(R.string.namePartner);
             mNavigationView.addHeaderView(layout);
+            getApplication().setTheme(R.style.Partner_AppTheme_NoActionBar);
 
 
         } else {
@@ -201,7 +206,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             mNavigationView.setBackgroundColor(contextCompat);
 
             View layout = getLayoutInflater().inflate(R.layout.nav_head_main_drawer,linearLayout,false);
-
+            getApplication().setTheme(R.style.AppTheme_NoActionBar);
             TextView textView =(TextView) layout.findViewById(R.id.drawer_client_fio);
             textView.setText(R.string.nameClient);
             mNavigationView.addHeaderView(layout);

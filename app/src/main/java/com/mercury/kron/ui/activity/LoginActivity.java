@@ -26,6 +26,8 @@ import com.mercury.kron.R;
 
 import com.mercury.kron.auth.PhoneActivity;
 import com.mercury.kron.auth.VkAuth;
+import com.mercury.kron.ui.activity.showInstruction.MainShowInstructionActivity;
+import com.mercury.kron.ui.activity.showInstruction.PageFragment;
 import com.vk.sdk.util.VKUtil;
 
 import org.w3c.dom.Text;
@@ -56,11 +58,15 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
      private RelativeLayout mRelativeLayout;
     private Switch aSwitch;
     private boolean isPartner = false;
+    private static boolean isFirst = false;
     public static final String EXTRA_BOOLEAN = "boolean" ;
     private TextView mtextForSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        isPartner = getIntent().getBooleanExtra(MainShowInstructionActivity.EXTRA_BOOLEAN,false);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mRelativeLayout = (RelativeLayout) findViewById(R.id.login_activity_maket);
@@ -105,11 +111,19 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             @Override
             public void onCheckedChanged(CompoundButton buttonView,
                                          boolean isChecked) {
+               if(!isFirst)showInstruction();
               setStyleForPartner(isChecked);
 
             }
 
         });
+        setStyleForPartner(isPartner);
+    }
+
+    private void showInstruction() {
+        isFirst=true;
+        Intent intent = new Intent(LoginActivity.this,MainShowInstructionActivity.class);
+        startActivity(intent);
 
     }
 
@@ -153,6 +167,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 break;
             case R.id.textView2:
                 Intent intent1 = new Intent(this,RegActivity.class);
+                intent1.putExtra("boolean",isPartner);
                 startActivity(intent1);
                 break;
             case R.id.vk_but:
@@ -236,11 +251,13 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         if(isChecked){
             mtextForSwitch.setText(R.string.kron_partner);
             isPartner = true;
+            aSwitch.setBackgroundResource(R.drawable.switchbackground);
            int contextCompat = ContextCompat.getColor(LoginActivity.this, R.color.app_partner_background);
             mRelativeLayout.setBackgroundColor(contextCompat);
             mButtonPhone.setBackgroundColor(contextCompat);
             mFBBut.setBackgroundColor(contextCompat);
             mVkBut.setBackgroundColor(contextCompat);
+         //   getApplication().setTheme(R.style.Partner_AppTheme);
         }else {
             mtextForSwitch.setText(R.string.kron_client);
             isPartner = false;
@@ -249,6 +266,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             mButtonPhone.setBackgroundColor(contextCompat);
             mFBBut.setBackgroundColor(contextCompat);
             mVkBut.setBackgroundColor(contextCompat);
+         //   getApplication().setTheme(R.style.AppTheme);
+            aSwitch.setBackgroundResource(R.drawable.switch_back_white);
 
         }
 

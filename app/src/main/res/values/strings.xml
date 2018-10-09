@@ -41,5 +41,10 @@
     <string name="first_use">Пользуетесь KRON впервые?</string>
     <string name="namePartner">Имя партнера</string>
     <string name="nameClient">Имя клиента</string>
+    <string name="i_agree_part1"><u>"Соглашение на обработку</u></string>
+    <string name="i_agree_part2"><u>персональных данных</u></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
