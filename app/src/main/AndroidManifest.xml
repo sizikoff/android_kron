@@ -18,8 +18,9 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
+
     <application
-        android:name=".utils.KronApplication"
+    android:name=".utils.KronApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -63,6 +64,7 @@
             android:parentActivityName=".ui.activity.LoginActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".auth.VkAuth" />
+
         <activity
             android:name=".ui.activity.tamplets.LoginPartnerActivity"
             android:label="@string/title_activity_login_partner" />

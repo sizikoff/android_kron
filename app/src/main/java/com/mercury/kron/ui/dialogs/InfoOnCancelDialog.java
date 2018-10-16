@@ -37,7 +37,7 @@ public class InfoOnCancelDialog extends DialogFragment implements View.OnClickLi
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         View v = LayoutInflater.from(getActivity()).inflate(R.layout.info_on_cancel_dialog, null);
-        TextView mTvMsg = (TextView) v.findViewById(R.id.info_on_cancle_msg);
+        TextView mTvMsg = v.findViewById(R.id.info_on_cancle_msg);
 
         mTvMsg.setText(mMsg);
 

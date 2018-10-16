@@ -44,7 +44,7 @@ public class PaymentsActivity extends BaseActivity implements NavigationView.OnN
     }
 
     private void setupDrower() {
-        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
+        NavigationView navigationView = findViewById(R.id.navigation_view);
         //navigationView.setCheckedItem(R.id.drawer_tr);
         navigationView.setNavigationItemSelectedListener(this);
     }
@@ -94,7 +94,7 @@ public class PaymentsActivity extends BaseActivity implements NavigationView.OnN
     }
 
     private void setNavigationDrawerIcon() {
-        ImageView imageView = (ImageView) findViewById(R.id.drawer_photo);
+        ImageView imageView = findViewById(R.id.drawer_photo);
         //imageView.setImageResource(R.drawable.userphoto);
         imageView.setImageBitmap(new RoundedBitmap(
                 BitmapFactory.decodeResource(this.getResources(), R.drawable.logo_man))

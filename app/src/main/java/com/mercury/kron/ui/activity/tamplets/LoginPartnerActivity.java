@@ -74,7 +74,7 @@ public class LoginPartnerActivity extends AppCompatActivity implements LoaderCal
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_partner);
         //Set up switch to the client
-        aSwitch = (Switch) findViewById(R.id.switch_to_client);
+        aSwitch = findViewById(R.id.switch_to_client);
         aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView,
@@ -89,10 +89,10 @@ public class LoginPartnerActivity extends AppCompatActivity implements LoaderCal
 
         });
         // Set up the login form.
-        mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
+        mEmailView = findViewById(R.id.email);
         populateAutoComplete();
 
-        mPasswordView = (EditText) findViewById(R.id.password_partner);
+        mPasswordView = findViewById(R.id.password_partner);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
@@ -104,7 +104,7 @@ public class LoginPartnerActivity extends AppCompatActivity implements LoaderCal
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        Button mEmailSignInButton = findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {

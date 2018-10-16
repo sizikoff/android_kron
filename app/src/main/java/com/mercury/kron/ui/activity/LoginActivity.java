@@ -63,24 +63,29 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     private TextView mtextForSwitch;
 
     @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         isPartner = getIntent().getBooleanExtra(MainShowInstructionActivity.EXTRA_BOOLEAN,false);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        mRelativeLayout = (RelativeLayout) findViewById(R.id.login_activity_maket);
-        mtextForSwitch = (TextView) findViewById(R.id.text_switch);
+        mRelativeLayout = findViewById(R.id.login_activity_maket);
+        mtextForSwitch = findViewById(R.id.text_switch);
         mAuth = FirebaseAuth.getInstance();
 
-        mEmail = (EditText) findViewById(R.id.login_email_et);
-        mPassword = (EditText) findViewById(R.id.login_password_et);
-        mRememberPass = (TextView) findViewById(R.id.login_remember_pass);
-        mButtonLogin = (Button) findViewById(R.id.login_bt);
-        mButtonPhone = (ImageButton) findViewById(R.id.phoneSign);
-        RegWindow = (TextView) findViewById(R.id.textView2);
-        mVkBut = (ImageButton) findViewById(R.id.vk_but);
-        mFBBut = (ImageButton) findViewById(R.id.fb_but);
+        mEmail = findViewById(R.id.login_email_et);
+        mPassword = findViewById(R.id.login_password_et);
+        mRememberPass = findViewById(R.id.login_remember_pass);
+        mButtonLogin = findViewById(R.id.login_bt);
+        mButtonPhone = findViewById(R.id.phoneSign);
+        RegWindow = findViewById(R.id.textView2);
+        mVkBut = findViewById(R.id.vk_but);
+        mFBBut = findViewById(R.id.fb_but);
 
         RegWindow.setOnClickListener(this);
         mButtonPhone.setOnClickListener(this);
@@ -100,12 +105,12 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         };
         Intent intent = getIntent ();
         String messageText = intent . getStringExtra ( EXTRA_MESSAGE );
-        mEmail = (EditText) findViewById(R.id.login_email_et);
+        mEmail = findViewById(R.id.login_email_et);
         mEmail . setText ( messageText );
 
         String[] fingerprints = VKUtil.getCertificateFingerprint(this, this.getPackageName());
         System.out.println(Arrays.asList(fingerprints));
-        aSwitch = (Switch) findViewById(R.id.switch_to_partner);
+        aSwitch = findViewById(R.id.switch_to_partner);
 
         aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -251,6 +256,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         if(isChecked){
             mtextForSwitch.setText(R.string.kron_partner);
             isPartner = true;
+            aSwitch.setChecked(true);
             aSwitch.setBackgroundResource(R.drawable.switchbackground);
            int contextCompat = ContextCompat.getColor(LoginActivity.this, R.color.app_partner_background);
             mRelativeLayout.setBackgroundColor(contextCompat);
@@ -268,6 +274,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             mVkBut.setBackgroundColor(contextCompat);
          //   getApplication().setTheme(R.style.AppTheme);
             aSwitch.setBackgroundResource(R.drawable.switch_back_white);
+            aSwitch.setChecked(false);
 
         }
 

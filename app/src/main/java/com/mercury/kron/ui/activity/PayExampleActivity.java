@@ -39,11 +39,11 @@ public class PayExampleActivity extends Activity implements View.OnClickListener
         setContentView(R.layout.activity_simple_example);
 
         findViewById(R.id.btn_amount).setOnClickListener(this);
-        editAmount = (EditText) findViewById(R.id.edit_amount);
-        spinnerCcy = (Spinner) findViewById(R.id.spinner_ccy);
-        editEmail = (EditText) findViewById(R.id.edit_email);
-        editDescription = (EditText) findViewById(R.id.edit_description);
-        cardInput = (CardInputView) findViewById(R.id.card_input);
+        editAmount = findViewById(R.id.edit_amount);
+        spinnerCcy = findViewById(R.id.spinner_ccy);
+        editEmail = findViewById(R.id.edit_email);
+        editDescription = findViewById(R.id.edit_description);
+        cardInput = findViewById(R.id.card_input);
         cardInput.setHelpedNeeded(BuildConfig.DEBUG);
         cardInput.setCompletionListener(new CardInputView.CompletionListener() {
             @Override
@@ -53,7 +53,7 @@ public class PayExampleActivity extends Activity implements View.OnClickListener
         });
         findViewById(R.id.btn_pay).setOnClickListener(this);
 
-        webView = (CloudipspWebView) findViewById(R.id.web_view);
+        webView = findViewById(R.id.web_view);
         cloudipsp = new Cloudipsp(MERCHANT_ID, webView);
 
         spinnerCcy.setAdapter(new ArrayAdapter<Currency>(this, android.R.layout.simple_spinner_item, Currency.values()));

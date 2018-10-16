@@ -1,9 +1,9 @@
 package com.mercury.kron.auth;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -47,11 +47,11 @@ public class PhoneActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone);
 
-        phoneText = (EditText) findViewById(R.id.phoneText);
-        codeText = (EditText) findViewById(R.id.codeText);
-        verifyButton = (Button) findViewById(R.id.verifyButton);
-        sendButton = (Button) findViewById(R.id.sendButton);
-        resendButton = (Button) findViewById(R.id.resendButton);
+        phoneText = findViewById(R.id.phoneText);
+        codeText = findViewById(R.id.codeText);
+        verifyButton = findViewById(R.id.verifyButton);
+        sendButton = findViewById(R.id.sendButton);
+        resendButton = findViewById(R.id.resendButton);
 
 
 

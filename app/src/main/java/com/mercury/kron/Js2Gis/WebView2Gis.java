@@ -19,7 +19,7 @@ public class WebView2Gis extends WebView {
     private AutoActivity myActivity;
 
 
-    public WebView2Gis(final WebViewCallbacks webViewCallbacks) throws Exception {
+    public WebView2Gis(final WebViewCallbacks webViewCallbacks) {
         super((Context) webViewCallbacks);
 
         this.webViewCallbacks = webViewCallbacks;

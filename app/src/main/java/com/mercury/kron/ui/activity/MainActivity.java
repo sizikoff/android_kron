@@ -45,12 +45,12 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mRelativeLayout = (RelativeLayout) findViewById(R.id.relative_layout_main);
+        mRelativeLayout = findViewById(R.id.relative_layout_main);
         isPartner = getIntent().getBooleanExtra(LoginActivity.EXTRA_BOOLEAN,false);
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mNavigationDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-       mNavigationView = (NavigationView) findViewById(R.id.navigation_view);
+        mToolbar = findViewById(R.id.toolbar);
+        mNavigationDrawer = findViewById(R.id.drawer_layout);
+       mNavigationView = findViewById(R.id.navigation_view);
 
 
         setStyleForPartner(isPartner);
@@ -175,7 +175,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     }
 
     private void setNavigationDrawerIcon(){
-        ImageView imageView=(ImageView) findViewById(R.id.drawer_photo);
+        ImageView imageView= findViewById(R.id.drawer_photo);
         //imageView.setImageResource(R.drawable.userphoto);
         imageView.setImageBitmap(new RoundedBitmap(
                 BitmapFactory.decodeResource(this.getResources(), R.drawable.logo_man))
@@ -192,7 +192,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
             View layout = getLayoutInflater().inflate(R.layout.nav_head_main_drawer,linearLayout,false);
 
-             TextView textView =(TextView) layout.findViewById(R.id.drawer_client_fio);
+             TextView textView = layout.findViewById(R.id.drawer_client_fio);
              textView.setText(R.string.namePartner);
             mNavigationView.addHeaderView(layout);
             getApplication().setTheme(R.style.Partner_AppTheme_NoActionBar);
@@ -207,7 +207,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
             View layout = getLayoutInflater().inflate(R.layout.nav_head_main_drawer,linearLayout,false);
             getApplication().setTheme(R.style.AppTheme_NoActionBar);
-            TextView textView =(TextView) layout.findViewById(R.id.drawer_client_fio);
+            TextView textView = layout.findViewById(R.id.drawer_client_fio);
             textView.setText(R.string.nameClient);
             mNavigationView.addHeaderView(layout);
         }

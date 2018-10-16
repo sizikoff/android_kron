@@ -89,14 +89,14 @@ public class InsPayCardActivity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_ins_pay_card);
 
 
-        mDateM = (EditText) findViewById(R.id.ins_pay_mm_et);
-        mDateY = (EditText) findViewById(R.id.ins_pay_gg_et);
-        mCardNum = (EditText) findViewById(R.id.ins_pay_card_num);
-        mCVV = (EditText) findViewById(R.id.ins_pay_cvv);
+        mDateM = findViewById(R.id.ins_pay_mm_et);
+        mDateY = findViewById(R.id.ins_pay_gg_et);
+        mCardNum = findViewById(R.id.ins_pay_card_num);
+        mCVV = findViewById(R.id.ins_pay_cvv);
 
-        mCardTypeIV = (ImageView) findViewById(R.id.ins_pay_logo_card_img);
+        mCardTypeIV = findViewById(R.id.ins_pay_logo_card_img);
 
-        mButton = (Button) findViewById(R.id.ins_pay_button);
+        mButton = findViewById(R.id.ins_pay_button);
 
         mButton.setOnClickListener(this);
 

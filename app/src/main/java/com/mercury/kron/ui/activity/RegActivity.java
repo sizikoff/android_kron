@@ -53,14 +53,14 @@ public class RegActivity extends BaseActivity implements OnClickListener {
 
 
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar_reg);
+        mToolbar = findViewById(R.id.toolbar_reg);
         mAuth = FirebaseAuth.getInstance();
-        Email = (EditText) findViewById(R.id.login_email_reg);
-        NameReg = (EditText) findViewById(R.id.name_reg);
-        Password = (EditText) findViewById(R.id.login_password_et1);
-        createAccount = (Button) findViewById(R.id.login_bt1);
-        ConfirmPassword = (EditText) findViewById(R.id._password_replay);
-        agreeButton = (ImageButton) findViewById(R.id.AgreeNotAgree);
+        Email = findViewById(R.id.login_email_reg);
+        NameReg = findViewById(R.id.name_reg);
+        Password = findViewById(R.id.login_password_et1);
+        createAccount = findViewById(R.id.login_bt1);
+        ConfirmPassword = findViewById(R.id._password_replay);
+        agreeButton = findViewById(R.id.AgreeNotAgree);
         findViewById(R.id.AgreeNotAgree).setOnClickListener(this);
         findViewById(R.id.login_bt1).setOnClickListener(this);
         findViewById(R.id.textView_vhod).setOnClickListener(this);
@@ -111,7 +111,7 @@ public class RegActivity extends BaseActivity implements OnClickListener {
             case R.id.login_bt1: {
                 if (Password.getText().toString().equals(ConfirmPassword.getText().toString())) {
                     reg(Email.getText().toString(), Password.getText().toString());
-                    EditText messageView = (EditText) findViewById(R.id.login_email_reg);
+                    EditText messageView = findViewById(R.id.login_email_reg);
                     String messageText = messageView.getText().toString();
                     Intent intent = new Intent(this, LoginActivity.class);
                     intent.putExtra(LoginActivity.EXTRA_MESSAGE, messageText);

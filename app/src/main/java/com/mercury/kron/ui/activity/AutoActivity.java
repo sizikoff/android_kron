@@ -64,15 +64,15 @@ public class AutoActivity extends BaseActivity implements View.OnClickListener, 
         setPermissions();
         isPartner = getIntent().getBooleanExtra(MainActivity.EXTRA_BOOLEAN,false);
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mOkButton = (Button) findViewById(R.id.auto_ok_bt);
+        mToolbar = findViewById(R.id.toolbar);
+        mOkButton = findViewById(R.id.auto_ok_bt);
 
         mOkButton.setOnClickListener(this);
         setStyleForPartner(isPartner);
         setupToolBar();
 
 
-        FrameLayout autoWebView = (FrameLayout) findViewById(R.id.auto_webview);
+        FrameLayout autoWebView = findViewById(R.id.auto_webview);
         try {
             autoWebView.addView(new WebView2Gis(this));
         } catch (Exception e) {
