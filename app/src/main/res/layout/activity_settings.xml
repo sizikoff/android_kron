@@ -35,26 +35,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <Button
-                android:id="@+id/dannye"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:drawableLeft="@drawable/ic_s1"
-                android:drawablePadding="30dp"
-                android:paddingLeft="20dp"
-                android:gravity="left|center_vertical"
-                android:text="@string/privacy" />
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/dannye"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_s1"
+                    android:drawablePadding="30dp"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="@string/privacy" />
 
             <Button
                 android:id="@+id/plateska"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/dannye"
                 android:drawableLeft="@drawable/ic_s2"
                 android:drawablePadding="30dp"
                 android:paddingLeft="20dp"
                 android:gravity="left|center_vertical"
                 android:text="@string/rejviziti" />
+
+            </RelativeLayout>
 
             <Button
                 android:id="@+id/share"
