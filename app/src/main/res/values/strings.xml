@@ -25,6 +25,8 @@
     <string name="prompt_email">ivanov@gmail.com</string>
     <string name="prompt_password">*************</string>
     <string name="action_sign_in">Войти</string>
+    <string name="skoro">СКОРО!</string>
+    <string name="in_ypu_reg">В ВАШЕМ РЕГИОНЕ</string>
 
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>

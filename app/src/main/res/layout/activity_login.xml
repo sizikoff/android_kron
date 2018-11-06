@@ -27,13 +27,14 @@
         android:layout_alignParentEnd="true"
        android:background="@drawable/switch_back_white"
               />
+
     <ImageView
         android:id="@+id/login_image"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/switch_to_partner"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
         android:src="@drawable/kron" />
 
     <LinearLayout

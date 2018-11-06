@@ -56,9 +56,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         setStyleForPartner(isPartner);
         setupToolBar();
         setupDrower();
-
-
-
     }
 
 
@@ -121,47 +118,14 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 startActivity(intent);
                 break;
             case R.id.ship:
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Недоступно")
-                        .setMessage("Модуль в разработке")
-                        .setCancelable(false)
-                        .setNegativeButton("ОК",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        dialog.cancel();
-                                    }
-                                });
-                AlertDialog alert = builder.create();
-                alert.show();
+                intent = new Intent(this,FoodActivity.class);
+                startActivity(intent);
                 break;
             case R.id.food:
-                AlertDialog.Builder builder2 = new AlertDialog.Builder(MainActivity.this);
-                builder2.setTitle("Недоступно")
-                        .setMessage("Модуль в разработке")
-                        .setCancelable(false)
-                        .setNegativeButton("ОК",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        dialog.cancel();
-                                    }
-                                });
-                AlertDialog alert2 = builder2.create();
-                alert2.show();
+                intent = new Intent(this,FoodActivity.class);
+                startActivity(intent);
                 break;
             case R.id.zayavki:
-                AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
-                builder1.setTitle("Недоступно")
-                        .setMessage("Модуль в разработке")
-                        .setCancelable(false)
-                        .setNegativeButton("ОК",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        dialog.cancel();
-                                    }
-                                });
-                AlertDialog alert1 = builder1.create();
-                alert1.show();
                 break;
             case R.id.exit:
                 Intent intent1 = new Intent(this,LoginActivity.class);
