@@ -31,24 +31,17 @@
         <activity
             android:name=".ui.activity.MainActivity"
             android:noHistory="true">
-
-            <!--
+        </activity>
+        <activity android:name=".ui.activity.Splash2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-            -->
-
         </activity>
         <activity
             android:name=".ui.activity.LoginActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".ui.activity.PaymentActivity" />
         <activity android:name=".ui.activity.PayExampleActivity" />
