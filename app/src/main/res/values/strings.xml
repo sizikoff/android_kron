@@ -28,6 +28,14 @@
     <string name="skoro">СКОРО!</string>
     <string name="in_ypu_reg">В ВАШЕМ РЕГИОНЕ</string>
     <string name="set">НАСТРОЙКИ</string>
+    <string name="privacy">Личные данные</string>
+    <string name="rejviziti">Платежные реквизиты</string>
+    <string name="sharing">Поделиться с друзьями</string>
+    <string name="pravo">Правовые документы</string>
+    <string name="answ">Вопросы и ответы</string>
+    <string name="o_nas">О приложении</string>
+    <string name="close">Выход</string>
+
 
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
