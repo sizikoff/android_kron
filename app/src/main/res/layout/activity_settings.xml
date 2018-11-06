@@ -40,8 +40,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:drawableLeft="@drawable/zaglushka"
+                android:drawableLeft="@drawable/ic_s1"
                 android:drawablePadding="30dp"
+                android:paddingLeft="20dp"
                 android:gravity="left|center_vertical"
                 android:text="@string/privacy" />
 
@@ -49,8 +50,9 @@
                 android:id="@+id/plateska"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/zaglushka"
+                android:drawableLeft="@drawable/ic_s2"
                 android:drawablePadding="30dp"
+                android:paddingLeft="20dp"
                 android:gravity="left|center_vertical"
                 android:text="@string/rejviziti" />
 
@@ -58,8 +60,10 @@
                 android:id="@+id/share"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/zaglushka"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_s3"
                 android:drawablePadding="30dp"
+                android:paddingLeft="20dp"
                 android:gravity="left|center_vertical"
                 android:text="@string/sharing" />
 
@@ -69,6 +73,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/zaglushka"
                 android:drawablePadding="30dp"
+                android:paddingLeft="20dp"
                 android:gravity="left|center_vertical"
                 android:text="@string/pravo" />
 
@@ -77,8 +82,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:drawableLeft="@drawable/zaglushka"
+                android:drawableLeft="@drawable/ic_s5"
                 android:drawablePadding="30dp"
+                android:paddingLeft="20dp"
                 android:gravity="left|center_vertical"
                 android:text="@string/answ" />
 
@@ -86,8 +92,9 @@
                 android:id="@+id/about_app"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/zaglushka"
+                android:drawableLeft="@drawable/ic_s6"
                 android:drawablePadding="30dp"
+                android:paddingLeft="20dp"
                 android:gravity="left|center_vertical"
                 android:text="@string/o_nas" />
 
