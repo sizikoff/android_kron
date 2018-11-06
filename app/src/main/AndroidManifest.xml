@@ -27,8 +27,7 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity
-            android:name=".ui.activity.MainActivity"></activity>
+        <activity android:name=".ui.activity.MainActivity" />
         <activity android:name=".ui.activity.Splash2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,7 +35,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.LoginActivity"></activity>
+        <activity android:name=".ui.activity.LoginActivity" />
         <activity android:name=".ui.activity.PaymentActivity" />
         <activity android:name=".ui.activity.PayExampleActivity" />
         <activity android:name=".ui.activity.PaymentsActivity" />
@@ -55,7 +54,8 @@
             android:name=".ui.activity.tamplets.LoginPartnerActivity"
             android:label="@string/title_activity_login_partner" />
         <activity android:name=".ui.activity.showInstruction.MainShowInstructionActivity" />
-        <activity android:name=".ui.activity.FoodActivity"></activity>
+        <activity android:name=".ui.activity.FoodActivity" />
+        <activity android:name=".ui.activity.SettingsActivity"></activity>
     </application>
 
 </manifest>
