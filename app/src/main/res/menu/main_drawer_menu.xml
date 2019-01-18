@@ -29,10 +29,6 @@
             android:icon="@drawable/logo_settings"
             android:id="@+id/settings"
             android:title="Настройки"/>
-        <item
-            android:icon="@drawable/logo_exit"
-            android:id="@+id/exit"
-            android:title="Выход"/>
 
     </group>
 </menu>

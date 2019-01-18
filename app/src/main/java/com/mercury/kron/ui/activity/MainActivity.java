@@ -131,11 +131,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 intent = new Intent(this,SettingsActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.exit:
-                Intent intent1 = new Intent(this,LoginActivity.class);
-                intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent1);
-                break;
 
         }
         mNavigationDrawer.closeDrawer(GravityCompat.START);
