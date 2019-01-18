@@ -3,6 +3,8 @@
     <color name="colorPrimary">#00636c</color>
     <color name="colorPrimaryDark">#00636c</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorBack">#ededed</color>
+    <color name="colorBacks">#ffffff</color>
 
     <!-- custom color -->
     <color name="app_main_background">#00636c</color>

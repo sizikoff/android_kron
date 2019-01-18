@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBack"
+    tools:context="com.mercury.kron.ui.activity.DannyeActivity">
+
+    <include
+        android:id="@+id/toolbarTop"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:hint="Ваше имя"
+        android:background="@color/colorBacks"
+        android:textSize="15sp"
+        android:layout_marginTop="30dp"
+        android:paddingTop="5dp"
+        android:paddingStart="40dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/famile"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:hint="Ваша Фамилия"
+        android:background="@color/colorBacks"
+        android:textSize="15sp"
+        android:paddingTop="5dp"
+        android:paddingStart="40dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:text="Контактная информация" />
+
+    <EditText
+        android:id="@+id/number"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:hint="Номер телефона"
+        android:background="@color/colorBacks"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:paddingTop="5dp"
+        android:paddingStart="40dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:hint="Ваша Фамилия"
+        android:background="@color/colorBacks"
+        android:textSize="15sp"
+        android:paddingTop="5dp"
+        android:paddingStart="40dp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/adress"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:hint="Ваша адрес"
+        android:background="@color/colorBacks"
+        android:textSize="15sp"
+        android:paddingTop="5dp"
+        android:paddingStart="40dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/smena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:text="Смена пароля" />
+
+    <EditText
+        android:id="@+id/old"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:hint="Старый пароль"
+        android:background="@color/colorBacks"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:paddingTop="5dp"
+        android:paddingStart="40dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/newspass"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:hint="Новый пароль"
+        android:background="@color/colorBacks"
+        android:textSize="15sp"
+        android:paddingTop="5dp"
+        android:paddingStart="40dp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/reppass"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:hint="повторите пароль"
+        android:background="@color/colorBacks"
+        android:textSize="15sp"
+        android:paddingTop="5dp"
+        android:paddingStart="40dp"
+        android:textStyle="bold" />
+
+</LinearLayout>

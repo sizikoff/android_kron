@@ -55,7 +55,12 @@
             android:label="@string/title_activity_login_partner" />
         <activity android:name=".ui.activity.showInstruction.MainShowInstructionActivity" />
         <activity android:name=".ui.activity.FoodActivity" />
-        <activity android:name=".ui.activity.SettingsActivity"></activity>
+        <activity android:name=".ui.activity.SettingsActivity" />
+        <activity android:name=".ui.activity.DocksActivity" />
+        <activity android:name=".ui.activity.DannyeActivity" />
+        <activity android:name=".ui.activity.PolzActivity" />
+        <activity android:name=".ui.activity.PolitActivity" />
+        <activity android:name=".ui.activity.CookActivity"></activity>
     </application>
 
 </manifest>

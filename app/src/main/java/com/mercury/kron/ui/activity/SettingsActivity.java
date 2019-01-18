@@ -38,7 +38,8 @@ public class SettingsActivity extends BaseActivity {
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(SettingsActivity.this,DannyeActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -61,7 +62,8 @@ public class SettingsActivity extends BaseActivity {
         bt4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+            Intent intent = new Intent(SettingsActivity.this,DocksActivity.class);
+            startActivity(intent);
             }
         });
 
