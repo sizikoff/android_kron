@@ -60,7 +60,8 @@
         <activity android:name=".ui.activity.DannyeActivity" />
         <activity android:name=".ui.activity.PolzActivity" />
         <activity android:name=".ui.activity.PolitActivity" />
-        <activity android:name=".ui.activity.CookActivity"></activity>
+        <activity android:name=".ui.activity.CookActivity" />
+        <activity android:name=".ui.activity.AboutApp"></activity>
     </application>
 
 </manifest>

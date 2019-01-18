@@ -79,7 +79,8 @@ public class SettingsActivity extends BaseActivity {
         bt6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(SettingsActivity.this,AboutApp.class);
+                startActivity(intent);
             }
         });
 

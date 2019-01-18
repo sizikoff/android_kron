@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBack"
+    tools:context="com.mercury.kron.ui.activity.AboutApp">
+
+    <include
+        android:id="@+id/toolbarTop"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/ivSplashIcon"
+        android:layout_width="139dp"
+        android:layout_height="116dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/kron_main" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Версися 0.2" />
+
+    <TextView
+        android:id="@+id/feedback"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="@string/feedback_app"
+        android:background="@color/colorBacks"
+        android:textSize="15sp"
+        android:layout_marginTop="40dp"
+        android:paddingTop="5dp"
+        android:paddingStart="20dp"
+        android:drawableRight="@drawable/ic_arrow"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/rate"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="@string/rate_app"
+        android:background="@color/colorBacks"
+        android:textSize="15sp"
+        android:paddingTop="5dp"
+        android:paddingStart="20dp"
+        android:drawableRight="@drawable/ic_arrow"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/politika"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="@string/privacy_policy"
+        android:background="@color/colorBacks"
+        android:textSize="15sp"
+        android:paddingTop="5dp"
+        android:paddingStart="20dp"
+        android:drawableRight="@drawable/ic_arrow"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/polzovanie"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="@string/polzo"
+        android:background="@color/colorBacks"
+        android:textSize="15sp"
+        android:paddingTop="5dp"
+        android:paddingStart="20dp"
+        android:drawableRight="@drawable/ic_arrow"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/license"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="@string/license"
+        android:background="@color/colorBacks"
+        android:textSize="15sp"
+        android:paddingTop="5dp"
+        android:paddingStart="20dp"
+        android:drawableRight="@drawable/ic_arrow"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/o_nashei"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="@string/comp"
+        android:background="@color/colorBacks"
+        android:textSize="15sp"
+        android:paddingTop="5dp"
+        android:paddingStart="20dp"
+        android:drawableRight="@drawable/ic_arrow"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:text="© 2018 KRON, LLC Все права защищены"
+        android:textStyle="bold" />
+
+</LinearLayout>

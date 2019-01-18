@@ -421,5 +421,11 @@ XVI. Юридические оговорки
 Платформа управляется Обществом с ограниченной ответственностью «KRON». Регистрационный номер компании:
 1184632012036 (ИНН: 4632247874); юридический адрес: 305000, Россия, г. Курск, ул. Володарского 70, оф. 108.
     </string>
+    <string name="comp">О компании</string>
+    <string name="license">Лицензия</string>
+    <string name="polzo">Правила пользования</string>
+    <string name="privacy_policy">Политика конфиденциальности</string>
+    <string name="rate_app">Оцените приложение</string>
+    <string name="feedback_app">Обратная связь</string>
 
 </resources>
